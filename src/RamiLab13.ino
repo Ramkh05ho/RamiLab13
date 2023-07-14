@@ -9,8 +9,8 @@ OledWingAdafruit display;
 double latitude = 0.00;
 double longitude = 0.00;
 
-String eTopicOne = "testtopic/EpicTopic2";
-String eTopicTwo = "testtopic/EpicTopic3";
+String eTopicOne = "testtopic/RamiCool2";
+String eTopicTwo = "testtopic/RamiCool1";
 
 void setup()
 {
@@ -19,8 +19,8 @@ void setup()
     resetDisplay();
     display.display();
 
-    client.subscribe("testtopic/EpicTopic2");
-    client.subscribe("testtopic/EpicTopic3");
+    client.subscribe("testtopic/RamiCool2");
+    client.subscribe("testtopic/RamiCool1");
 }
 void loop()
 {
@@ -28,14 +28,14 @@ void loop()
     if (client.isConnected())
     {
         client.loop();
-        client.publish("testtopic/EpicTopic1", "Send");
+        client.publish("testtopic/RamiCool", "Send");
         delay(10000);
     }
     else
     {
         client.connect(System.deviceID());
-        client.subscribe("testtopic/EpicTopic2");
-        client.subscribe("testtopic/EpicTopic3");
+        client.subscribe("testtopic/RamiCool2");
+        client.subscribe("testtopic/RamiCool1");
         Serial.println("DIDN'T WORK");
     }
    
@@ -77,5 +77,5 @@ void callback(char *topic, byte *payload, unsigned int length)
 }
 void caller()
 {
-    client.publish("testtopic/EpicTopic1", "Send");
+    client.publish("testtopic/RamiCool", "Send");
 }

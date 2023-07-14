@@ -1157,8 +1157,8 @@ void __cxa_guard_release (__guard *g) {*(char *)g = 1;};
 
 000b4b84 <loop>:
 
-    client.subscribe("testtopic/EpicTopic2");
-    client.subscribe("testtopic/EpicTopic3");
+    client.subscribe("testtopic/RamiCool2");
+    client.subscribe("testtopic/RamiCool1");
 }
 void loop()
 {
@@ -1174,15 +1174,15 @@ void loop()
         client.loop();
    b4b94:	4815      	ldr	r0, [pc, #84]	; (b4bec <loop+0x68>)
    b4b96:	f001 fcee 	bl	b6576 <_ZN4MQTT4loopEv>
-        client.publish("testtopic/EpicTopic1", "Send");
+        client.publish("testtopic/RamiCool", "Send");
    b4b9a:	4a15      	ldr	r2, [pc, #84]	; (b4bf0 <loop+0x6c>)
    b4b9c:	4915      	ldr	r1, [pc, #84]	; (b4bf4 <loop+0x70>)
    b4b9e:	4813      	ldr	r0, [pc, #76]	; (b4bec <loop+0x68>)
    b4ba0:	f001 fc8d 	bl	b64be <_ZN4MQTT7publishEPKcS1_>
         delay(10000);
    b4ba4:	f242 7010 	movw	r0, #10000	; 0x2710
-        client.subscribe("testtopic/EpicTopic2");
-        client.subscribe("testtopic/EpicTopic3");
+        client.subscribe("testtopic/RamiCool2");
+        client.subscribe("testtopic/RamiCool1");
         Serial.println("DIDN'T WORK");
     }
    
@@ -1205,11 +1205,11 @@ void loop()
    b4bbc:	f001 fbf4 	bl	b63a8 <_ZN4MQTT7connectEPKc>
    b4bc0:	4668      	mov	r0, sp
    b4bc2:	f002 fd75 	bl	b76b0 <_ZN6StringD1Ev>
-        client.subscribe("testtopic/EpicTopic2");
+        client.subscribe("testtopic/RamiCool2");
    b4bc6:	490c      	ldr	r1, [pc, #48]	; (b4bf8 <loop+0x74>)
    b4bc8:	4808      	ldr	r0, [pc, #32]	; (b4bec <loop+0x68>)
    b4bca:	f001 fe1c 	bl	b6806 <_ZN4MQTT9subscribeEPKc>
-        client.subscribe("testtopic/EpicTopic3");
+        client.subscribe("testtopic/RamiCool1");
    b4bce:	490b      	ldr	r1, [pc, #44]	; (b4bfc <loop+0x78>)
    b4bd0:	4806      	ldr	r0, [pc, #24]	; (b4bec <loop+0x68>)
    b4bd2:	f001 fe18 	bl	b6806 <_ZN4MQTT9subscribeEPKc>
@@ -1226,9 +1226,9 @@ void loop()
    b4bec:	2003e5b8 	.word	0x2003e5b8
    b4bf0:	000ba46d 	.word	0x000ba46d
    b4bf4:	000ba472 	.word	0x000ba472
-   b4bf8:	000ba487 	.word	0x000ba487
-   b4bfc:	000ba49c 	.word	0x000ba49c
-   b4c00:	000ba4b1 	.word	0x000ba4b1
+   b4bf8:	000ba485 	.word	0x000ba485
+   b4bfc:	000ba499 	.word	0x000ba499
+   b4c00:	000ba4ad 	.word	0x000ba4ad
 
 000b4c04 <_Z12resetDisplayv>:
 void resetDisplay()
@@ -1265,7 +1265,7 @@ void resetDisplay()
    b4c2a:	f003 f995 	bl	b7f58 <_Z16_fetch_usbserialv>
    b4c2e:	f44f 5116 	mov.w	r1, #9600	; 0x2580
    b4c32:	f003 f985 	bl	b7f40 <_ZN9USBSerial5beginEl>
-    client.subscribe("testtopic/EpicTopic2");
+    client.subscribe("testtopic/RamiCool2");
    b4c36:	4c09      	ldr	r4, [pc, #36]	; (b4c5c <setup+0x34>)
     display.setup();
    b4c38:	4809      	ldr	r0, [pc, #36]	; (b4c60 <setup+0x38>)
@@ -1275,21 +1275,21 @@ void resetDisplay()
     display.display();
    b4c42:	4807      	ldr	r0, [pc, #28]	; (b4c60 <setup+0x38>)
    b4c44:	f001 f8b4 	bl	b5db0 <_ZN16Adafruit_SSD13067displayEv>
-    client.subscribe("testtopic/EpicTopic2");
+    client.subscribe("testtopic/RamiCool2");
    b4c48:	4906      	ldr	r1, [pc, #24]	; (b4c64 <setup+0x3c>)
    b4c4a:	4620      	mov	r0, r4
    b4c4c:	f001 fddb 	bl	b6806 <_ZN4MQTT9subscribeEPKc>
-    client.subscribe("testtopic/EpicTopic3");
+    client.subscribe("testtopic/RamiCool1");
    b4c50:	4620      	mov	r0, r4
    b4c52:	4905      	ldr	r1, [pc, #20]	; (b4c68 <setup+0x40>)
 }
    b4c54:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
-    client.subscribe("testtopic/EpicTopic3");
+    client.subscribe("testtopic/RamiCool1");
    b4c58:	f001 bdd5 	b.w	b6806 <_ZN4MQTT9subscribeEPKc>
    b4c5c:	2003e5b8 	.word	0x2003e5b8
    b4c60:	2003e618 	.word	0x2003e618
-   b4c64:	000ba487 	.word	0x000ba487
-   b4c68:	000ba49c 	.word	0x000ba49c
+   b4c64:	000ba485 	.word	0x000ba485
+   b4c68:	000ba499 	.word	0x000ba499
 
 000b4c6c <_Z8callbackPcPhj>:
 void callback(char *topic, byte *payload, unsigned int length)
@@ -1402,19 +1402,19 @@ void callback(char *topic, byte *payload, unsigned int length)
    b4d48:	ecbd 8b02 	vpop	{d8}
    b4d4c:	bdb0      	pop	{r4, r5, r7, pc}
    b4d4e:	bf00      	nop
-   b4d50:	000ba4bd 	.word	0x000ba4bd
+   b4d50:	000ba4b9 	.word	0x000ba4b9
    b4d54:	2003e6a8 	.word	0x2003e6a8
    b4d58:	2003e688 	.word	0x2003e688
-   b4d5c:	000ba4c0 	.word	0x000ba4c0
+   b4d5c:	000ba4bc 	.word	0x000ba4bc
    b4d60:	2003e698 	.word	0x2003e698
    b4d64:	2003e6b0 	.word	0x2003e6b0
-   b4d68:	000ba4c4 	.word	0x000ba4c4
+   b4d68:	000ba4c0 	.word	0x000ba4c0
    b4d6c:	2003e618 	.word	0x2003e618
 
 000b4d70 <_GLOBAL__sub_I_client>:
 void caller()
 {
-    client.publish("testtopic/EpicTopic1", "Send");
+    client.publish("testtopic/RamiCool", "Send");
    b4d70:	b507      	push	{r0, r1, r2, lr}
 MQTT client("lab.thewcl.com", 1883, callback);
    b4d72:	2300      	movs	r3, #0
@@ -1428,25 +1428,25 @@ OledWingAdafruit display;
    b4d84:	2107      	movs	r1, #7
    b4d86:	480a      	ldr	r0, [pc, #40]	; (b4db0 <_GLOBAL__sub_I_client+0x40>)
    b4d88:	f001 fd5a 	bl	b6840 <_ZN16OledWingAdafruitC1Ei>
-String eTopicOne = "testtopic/EpicTopic2";
+String eTopicOne = "testtopic/RamiCool2";
    b4d8c:	4909      	ldr	r1, [pc, #36]	; (b4db4 <_GLOBAL__sub_I_client+0x44>)
    b4d8e:	480a      	ldr	r0, [pc, #40]	; (b4db8 <_GLOBAL__sub_I_client+0x48>)
    b4d90:	f002 fcd9 	bl	b7746 <_ZN6StringC1EPK19__FlashStringHelper>
-String eTopicTwo = "testtopic/EpicTopic3";
+String eTopicTwo = "testtopic/RamiCool1";
    b4d94:	4909      	ldr	r1, [pc, #36]	; (b4dbc <_GLOBAL__sub_I_client+0x4c>)
    b4d96:	480a      	ldr	r0, [pc, #40]	; (b4dc0 <_GLOBAL__sub_I_client+0x50>)
    b4d98:	b003      	add	sp, #12
    b4d9a:	f85d eb04 	ldr.w	lr, [sp], #4
-String eTopicTwo = "testtopic/EpicTopic3";
+String eTopicTwo = "testtopic/RamiCool1";
    b4d9e:	f002 bcd2 	b.w	b7746 <_ZN6StringC1EPK19__FlashStringHelper>
    b4da2:	bf00      	nop
-   b4da4:	000ba4c9 	.word	0x000ba4c9
+   b4da4:	000ba4c5 	.word	0x000ba4c5
    b4da8:	000b4c6d 	.word	0x000b4c6d
    b4dac:	2003e5b8 	.word	0x2003e5b8
    b4db0:	2003e618 	.word	0x2003e618
-   b4db4:	000ba487 	.word	0x000ba487
+   b4db4:	000ba485 	.word	0x000ba485
    b4db8:	2003e688 	.word	0x2003e688
-   b4dbc:	000ba49c 	.word	0x000ba49c
+   b4dbc:	000ba499 	.word	0x000ba499
    b4dc0:	2003e698 	.word	0x2003e698
 
 000b4dc4 <_ZN12Adafruit_GFX9writeLineEsssst>:
@@ -2074,7 +2074,7 @@ WIDTH(w), HEIGHT(h)
 }
    b50ee:	bd30      	pop	{r4, r5, pc}
    b50f0:	01000101 	.word	0x01000101
-   b50f4:	000ba9e0 	.word	0x000ba9e0
+   b50f4:	000ba9dc 	.word	0x000ba9dc
 
 000b50f8 <_ZN12Adafruit_GFX10drawBitmapEssPKhsst>:
   const uint8_t bitmap[], int16_t w, int16_t h, uint16_t color) {
@@ -2566,7 +2566,7 @@ WIDTH(w), HEIGHT(h)
    b546e:	b011      	add	sp, #68	; 0x44
    b5470:	ecbd 8b02 	vpop	{d8}
    b5474:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
-   b5478:	000ba4d8 	.word	0x000ba4d8
+   b5478:	000ba4d4 	.word	0x000ba4d4
 
 000b547c <_ZN12Adafruit_GFX5writeEh>:
 size_t Adafruit_GFX::write(uint8_t c) {
@@ -2794,12 +2794,12 @@ size_t Adafruit_GFX::write(uint8_t c) {
       return p.printf("<SPISettings %s%u %s MODE%u>", default_ ? "default " : "", (unsigned int)clock_,
    b55d4:	4a05      	ldr	r2, [pc, #20]	; (b55ec <_ZNK8particle11SPISettings7printToER5Print+0x50>)
    b55d6:	e7ef      	b.n	b55b8 <_ZNK8particle11SPISettings7printToER5Print+0x1c>
-   b55d8:	000baa41 	.word	0x000baa41
-   b55dc:	000baa38 	.word	0x000baa38
-   b55e0:	000baa3d 	.word	0x000baa3d
-   b55e4:	000baa39 	.word	0x000baa39
-   b55e8:	000baa57 	.word	0x000baa57
-   b55ec:	000baa30 	.word	0x000baa30
+   b55d8:	000baa3d 	.word	0x000baa3d
+   b55dc:	000baa34 	.word	0x000baa34
+   b55e0:	000baa39 	.word	0x000baa39
+   b55e4:	000baa35 	.word	0x000baa35
+   b55e8:	000baa53 	.word	0x000baa53
+   b55ec:	000baa2c 	.word	0x000baa2c
 
 000b55f0 <_ZN16Adafruit_SSD1306D1Ev>:
 }
@@ -2822,7 +2822,7 @@ Adafruit_SSD1306::~Adafruit_SSD1306(void) {
 }
    b5600:	4620      	mov	r0, r4
    b5602:	bd10      	pop	{r4, pc}
-   b5604:	000baf30 	.word	0x000baf30
+   b5604:	000baf2c 	.word	0x000baf2c
 
 000b5608 <_ZN16Adafruit_SSD1306D0Ev>:
 Adafruit_SSD1306::~Adafruit_SSD1306(void) {
@@ -3010,8 +3010,8 @@ Adafruit_SSD1306::Adafruit_SSD1306(uint8_t w, uint8_t h, TwoWire *twi,
    b572e:	4620      	mov	r0, r4
    b5730:	bd70      	pop	{r4, r5, r6, pc}
    b5732:	bf00      	nop
-   b5734:	000baf30 	.word	0x000baf30
-   b5738:	000baa7c 	.word	0x000baa7c
+   b5734:	000baf2c 	.word	0x000baf2c
+   b5738:	000baa78 	.word	0x000baa78
 
 000b573c <_ZN16Adafruit_SSD130616ssd1306_command1Eh>:
 void Adafruit_SSD1306::ssd1306_command1(uint8_t c) {
@@ -3549,18 +3549,18 @@ void Adafruit_SSD1306::ssd1306_commandList(const uint8_t *c, uint8_t n) {
    b5b4c:	f001 fd22 	bl	b7594 <_ZN8SPIClass14endTransactionEv>
    b5b50:	e792      	b.n	b5a78 <_ZN16Adafruit_SSD13065beginEhhbb+0x188>
    b5b52:	bf00      	nop
-   b5b54:	000bad48 	.word	0x000bad48
-   b5b58:	000baa88 	.word	0x000baa88
-   b5b5c:	000baf90 	.word	0x000baf90
-   b5b60:	000baf94 	.word	0x000baf94
-   b5b64:	000baf98 	.word	0x000baf98
+   b5b54:	000bad44 	.word	0x000bad44
+   b5b58:	000baa84 	.word	0x000baa84
+   b5b5c:	000baf8c 	.word	0x000baf8c
+   b5b60:	000baf90 	.word	0x000baf90
+   b5b64:	000baf94 	.word	0x000baf94
    b5b68:	00200080 	.word	0x00200080
-   b5b6c:	000bafa2 	.word	0x000bafa2
-   b5b70:	000baf9c 	.word	0x000baf9c
+   b5b6c:	000baf9e 	.word	0x000baf9e
+   b5b70:	000baf98 	.word	0x000baf98
    b5b74:	00400080 	.word	0x00400080
-   b5b78:	000bafa6 	.word	0x000bafa6
+   b5b78:	000bafa2 	.word	0x000bafa2
    b5b7c:	00100060 	.word	0x00100060
-   b5b80:	000bafa9 	.word	0x000bafa9
+   b5b80:	000bafa5 	.word	0x000bafa5
 
 000b5b84 <_ZN16Adafruit_SSD130621drawFastHLineInternalEssst>:
   int16_t x, int16_t y, int16_t w, uint16_t color) {
@@ -3802,8 +3802,8 @@ void Adafruit_SSD1306::ssd1306_commandList(const uint8_t *c, uint8_t n) {
    b5d06:	7822      	ldrb	r2, [r4, #0]
    b5d08:	4053      	eors	r3, r2
    b5d0a:	e7fa      	b.n	b5d02 <_ZN16Adafruit_SSD130621drawFastVLineInternalEssst+0xf6>
-   b5d0c:	000baf80 	.word	0x000baf80
-   b5d10:	000baf88 	.word	0x000baf88
+   b5d0c:	000baf7c 	.word	0x000baf7c
+   b5d10:	000baf84 	.word	0x000baf84
 
 000b5d14 <_ZN16Adafruit_SSD130613drawFastHLineEssst>:
   int16_t x, int16_t y, int16_t w, uint16_t color) {
@@ -4076,7 +4076,7 @@ void Adafruit_SSD1306::display(void) {
    b5ed8:	f001 bb5c 	b.w	b7594 <_ZN8SPIClass14endTransactionEv>
 }
    b5edc:	e8bd 83f8 	ldmia.w	sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
-   b5ee0:	000bafac 	.word	0x000bafac
+   b5ee0:	000bafa8 	.word	0x000bafa8
 
 000b5ee4 <_ZN8DebounceC1Ev>:
 
@@ -4382,7 +4382,7 @@ MQTT::MQTT(const char* domain, uint16_t port, void (*callback)(char*,uint8_t*,un
    b6050:	4620      	mov	r0, r4
    b6052:	b004      	add	sp, #16
    b6054:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
-   b6058:	000baa38 	.word	0x000baa38
+   b6058:	000baa34 	.word	0x000baa34
 
 000b605c <_ZN4MQTT8readByteEv>:
         _client.stop();
@@ -5571,7 +5571,7 @@ OledWingAdafruit::~OledWingAdafruit() {
    b6822:	4620      	mov	r0, r4
    b6824:	bd10      	pop	{r4, pc}
    b6826:	bf00      	nop
-   b6828:	000bafbc 	.word	0x000bafbc
+   b6828:	000bafb8 	.word	0x000bafb8
 
 000b682c <_ZN16OledWingAdafruitD0Ev>:
 OledWingAdafruit::~OledWingAdafruit() {
@@ -5619,7 +5619,7 @@ OledWingAdafruit::OledWingAdafruit(int useButtons) : Adafruit_SSD1306(128, 32), 
    b688e:	bf00      	nop
    b6890:	00061a80 	.word	0x00061a80
    b6894:	000186a0 	.word	0x000186a0
-   b6898:	000bafbc 	.word	0x000bafbc
+   b6898:	000bafb8 	.word	0x000bafb8
 
 000b689c <_ZN16OledWingAdafruit5setupEv>:
 
@@ -6856,7 +6856,7 @@ EthernetClass Ethernet;
 } // spark
    b6f12:	4770      	bx	lr
    b6f14:	2003e6c8 	.word	0x2003e6c8
-   b6f18:	000bb01c 	.word	0x000bb01c
+   b6f18:	000bb018 	.word	0x000bb018
 
 000b6f1c <_ZN7TwoWireD1Ev>:
 private:
@@ -6996,7 +6996,7 @@ TwoWire::TwoWire(hal_i2c_interface_t i2c, const hal_i2c_config_t& conf)
 }
    b6fa8:	4620      	mov	r0, r4
    b6faa:	bd38      	pop	{r3, r4, r5, pc}
-   b6fac:	000bb058 	.word	0x000bb058
+   b6fac:	000bb054 	.word	0x000bb054
 
 000b6fb0 <_ZN7TwoWire8setSpeedEm>:
   hal_i2c_set_speed(_i2c, clockSpeed, NULL);
@@ -7153,7 +7153,7 @@ IPAddress::IPAddress()
    b7066:	4620      	mov	r0, r4
    b7068:	bd10      	pop	{r4, pc}
    b706a:	bf00      	nop
-   b706c:	000bb080 	.word	0x000bb080
+   b706c:	000bb07c 	.word	0x000bb07c
 
 000b7070 <_ZN9IPAddressC1ERK16_HAL_IPAddress_t>:
 IPAddress::IPAddress(const HAL_IPAddress& address)
@@ -7171,7 +7171,7 @@ IPAddress::IPAddress(const HAL_IPAddress& address)
    b708c:	701a      	strb	r2, [r3, #0]
 }
    b708e:	bd10      	pop	{r4, pc}
-   b7090:	000bb080 	.word	0x000bb080
+   b7090:	000bb07c 	.word	0x000bb07c
 
 000b7094 <_ZNK9IPAddresscvbEv>:
 
@@ -7243,7 +7243,7 @@ IPAddress::IPAddress(const uint8_t* addr)
    b70f0:	b003      	add	sp, #12
    b70f2:	f85d fb04 	ldr.w	pc, [sp], #4
    b70f6:	bf00      	nop
-   b70f8:	000bb080 	.word	0x000bb080
+   b70f8:	000bb07c 	.word	0x000bb07c
 
 000b70fc <_GLOBAL__sub_I__ZN5spark3LogE>:
     // This handler doesn't support direct logging
@@ -7263,7 +7263,7 @@ void spark::logProcessControlRequest(ctrl_request* req) {
 }
    b7102:	4770      	bx	lr
    b7104:	2003e6d0 	.word	0x2003e6d0
-   b7108:	000bb08c 	.word	0x000bb08c
+   b7108:	000bb088 	.word	0x000bb088
 
 000b710c <_ZN5spark12NetworkClass7connectEj>:
         return Network;
@@ -7559,7 +7559,7 @@ class IPAddress : public Printable {
 } // spark
    b7266:	4770      	bx	lr
    b7268:	2003e6d4 	.word	0x2003e6d4
-   b726c:	000bb098 	.word	0x000bb098
+   b726c:	000bb094 	.word	0x000bb094
 
 000b7270 <_ZN5Print5writeEPKhj>:
 
@@ -7952,14 +7952,14 @@ size_t Print::printFloat(double number, uint8_t digits)
         size_t t = 0;
    b74a0:	2300      	movs	r3, #0
    b74a2:	e7e6      	b.n	b7472 <_ZN5Print10printFloatEdh+0x13a>
-   b74a4:	000bb0cc 	.word	0x000bb0cc
+   b74a4:	000bb0c8 	.word	0x000bb0c8
    b74a8:	7fefffff 	.word	0x7fefffff
-   b74ac:	000bb0d0 	.word	0x000bb0d0
+   b74ac:	000bb0cc 	.word	0x000bb0cc
    b74b0:	41efffff 	.word	0x41efffff
-   b74b4:	000bb0d4 	.word	0x000bb0d4
+   b74b4:	000bb0d0 	.word	0x000bb0d0
    b74b8:	c1efffff 	.word	0xc1efffff
    b74bc:	3fe00000 	.word	0x3fe00000
-   b74c0:	000bb0d8 	.word	0x000bb0d8
+   b74c0:	000bb0d4 	.word	0x000bb0d4
    b74c4:	40240000 	.word	0x40240000
 
 000b74c8 <_ZN5Print7printlnEdi>:
@@ -8181,7 +8181,7 @@ void SPIClass::computeClockDivider(unsigned reference, unsigned targetSpeed, uin
 }
    b75c0:	bd30      	pop	{r4, r5, pc}
    b75c2:	bf00      	nop
-   b75c4:	000bb0da 	.word	0x000bb0da
+   b75c4:	000bb0d6 	.word	0x000bb0d6
 
 000b75c8 <_ZN8SPIClass16beginTransactionERKN8particle11SPISettingsE>:
 {
@@ -8761,7 +8761,7 @@ TCPClient::operator bool() {
       }
    b78a4:	4620      	mov	r0, r4
    b78a6:	bd10      	pop	{r4, pc}
-   b78a8:	000bb00c 	.word	0x000bb00c
+   b78a8:	000bb008 	.word	0x000bb008
 
 000b78ac <_ZNSt23_Sp_counted_ptr_inplaceIN9TCPClient4DataESaIS1_ELN9__gnu_cxx12_Lock_policyE0EED0Ev>:
       ~_Sp_counted_ptr_inplace() noexcept { }
@@ -8882,7 +8882,7 @@ public:
    b7962:	4798      	blx	r3
    b7964:	4628      	mov	r0, r5
    b7966:	bd38      	pop	{r3, r4, r5, pc}
-   b7968:	000bb120 	.word	0x000bb120
+   b7968:	000bb11c 	.word	0x000bb11c
 
 000b796c <_ZN9TCPClientD0Ev>:
    b796c:	b510      	push	{r4, lr}
@@ -8934,7 +8934,7 @@ class IPAddress : public Printable {
 }
    b79b4:	4630      	mov	r0, r6
    b79b6:	bd70      	pop	{r4, r5, r6, pc}
-   b79b8:	000bb080 	.word	0x000bb080
+   b79b8:	000bb07c 	.word	0x000bb07c
 
 000b79bc <_ZN9TCPClient7connectEPKctm>:
 int TCPClient::connect(const char* host, uint16_t port, network_interface_t nif) {
@@ -9087,7 +9087,7 @@ class IPAddress : public Printable {
    b7aae:	4625      	mov	r5, r4
    b7ab0:	e7e8      	b.n	b7a84 <_ZN9TCPClient7connectEPKctm+0xc8>
    b7ab2:	bf00      	nop
-   b7ab4:	000bb080 	.word	0x000bb080
+   b7ab4:	000bb07c 	.word	0x000bb07c
 
 000b7ab8 <_ZN9TCPClient9connectedEv>:
 uint8_t TCPClient::connected() {
@@ -9433,8 +9433,8 @@ int TCPClient::connect(IPAddress ip, uint16_t port, network_interface_t nif) {
    b7d1a:	601a      	str	r2, [r3, #0]
    b7d1c:	e7d4      	b.n	b7cc8 <_ZN9TCPClient9availableEv+0x54>
    b7d1e:	bf00      	nop
-   b7d20:	000bb0e9 	.word	0x000bb0e9
-   b7d24:	000bb0e2 	.word	0x000bb0e2
+   b7d20:	000bb0e5 	.word	0x000bb0e5
+   b7d24:	000bb0de 	.word	0x000bb0de
 
 000b7d28 <_ZN9TCPClient4stopEv>:
 void TCPClient::stop() {
@@ -9542,8 +9542,8 @@ TCPClient::TCPClient(sock_handle_t sock)
    b7dae:	b002      	add	sp, #8
    b7db0:	bd70      	pop	{r4, r5, r6, pc}
    b7db2:	bf00      	nop
-   b7db4:	000bb120 	.word	0x000bb120
-   b7db8:	000bb104 	.word	0x000bb104
+   b7db4:	000bb11c 	.word	0x000bb11c
+   b7db8:	000bb100 	.word	0x000bb100
 
 000b7dbc <_ZN9TCPClientC1Ev>:
 TCPClient::TCPClient()
@@ -9749,7 +9749,7 @@ USARTSerial::USARTSerial(hal_usart_interface_t serial, const hal_usart_buffer_co
 }
    b7e94:	4620      	mov	r0, r4
    b7e96:	bd10      	pop	{r4, pc}
-   b7e98:	000bb188 	.word	0x000bb188
+   b7e98:	000bb184 	.word	0x000bb184
 
 000b7e9c <_ZN9USBSerial14blockOnOverrunEb>:
   HAL_USB_USART_Flush_Data(_serial);
@@ -9880,7 +9880,7 @@ USBSerial::USBSerial(HAL_USB_USART_Serial serial, const HAL_USB_USART_Config& co
 }
    b7f38:	4620      	mov	r0, r4
    b7f3a:	bd10      	pop	{r4, pc}
-   b7f3c:	000bb1b8 	.word	0x000bb1b8
+   b7f3c:	000bb1b4 	.word	0x000bb1b4
 
 000b7f40 <_ZN9USBSerial5beginEl>:
     HAL_USB_USART_Begin(_serial, speed, NULL);
@@ -10035,7 +10035,7 @@ the same way.
 }
    b8016:	4770      	bx	lr
    b8018:	2003e718 	.word	0x2003e718
-   b801c:	000bb1e8 	.word	0x000bb1e8
+   b801c:	000bb1e4 	.word	0x000bb1e4
 
 000b8020 <_ZZ21module_user_init_hookENUlP6_reentjmPvE_4_FUNES0_jmS1_>:
 
@@ -10459,7 +10459,7 @@ TwoWire& __fetch_global_Wire()
    b8278:	bd38      	pop	{r3, r4, r5, pc}
    b827a:	bf00      	nop
    b827c:	00010018 	.word	0x00010018
-   b8280:	000bb21c 	.word	0x000bb21c
+   b8280:	000bb218 	.word	0x000bb218
 
 000b8284 <_Z19__fetch_global_Wirev>:
 {
@@ -10539,7 +10539,7 @@ USARTSerial& __fetch_global_Serial1()
    b82fa:	4620      	mov	r0, r4
    b82fc:	bd38      	pop	{r3, r4, r5, pc}
    b82fe:	bf00      	nop
-   b8300:	000bb21c 	.word	0x000bb21c
+   b8300:	000bb218 	.word	0x000bb218
 
 000b8304 <_Z22__fetch_global_Serial1v>:
 {
@@ -10582,7 +10582,7 @@ USARTSerial& __fetch_global_Serial1()
    b8350:	4901      	ldr	r1, [pc, #4]	; (b8358 <_ZNSt19_Sp_make_shared_tag5_S_eqERKSt9type_info+0x8>)
    b8352:	f000 b8f9 	b.w	b8548 <_ZNKSt9type_infoeqERKS_>
    b8356:	bf00      	nop
-   b8358:	000bb238 	.word	0x000bb238
+   b8358:	000bb234 	.word	0x000bb234
 
 000b835c <_ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv>:
    b835c:	b57f      	push	{r0, r1, r2, r3, r4, r5, r6, lr}
@@ -10624,7 +10624,7 @@ USARTSerial& __fetch_global_Serial1()
    b83a4:	f000 f8cd 	bl	b8542 <_ZNSt9type_infoD1Ev>
    b83a8:	4620      	mov	r0, r4
    b83aa:	bd10      	pop	{r4, pc}
-   b83ac:	000bb278 	.word	0x000bb278
+   b83ac:	000bb274 	.word	0x000bb274
 
 000b83b0 <_ZN10__cxxabiv117__class_type_infoD0Ev>:
    b83b0:	b510      	push	{r4, lr}
@@ -10704,7 +10704,7 @@ USARTSerial& __fetch_global_Serial1()
    b844c:	f7ff ffa6 	bl	b839c <_ZN10__cxxabiv117__class_type_infoD1Ev>
    b8450:	4620      	mov	r0, r4
    b8452:	bd10      	pop	{r4, pc}
-   b8454:	000bb2d8 	.word	0x000bb2d8
+   b8454:	000bb2d4 	.word	0x000bb2d4
 
 000b8458 <_ZN10__cxxabiv120__si_class_type_infoD0Ev>:
    b8458:	b510      	push	{r4, lr}
@@ -10908,8 +10908,8 @@ USARTSerial& __fetch_global_Serial1()
    b85f4:	615a      	str	r2, [r3, #20]
    b85f6:	bd38      	pop	{r3, r4, r5, pc}
    b85f8:	2003e3e0 	.word	0x2003e3e0
-   b85fc:	000bb311 	.word	0x000bb311
-   b8600:	000bb328 	.word	0x000bb328
+   b85fc:	000bb30d 	.word	0x000bb30d
+   b8600:	000bb324 	.word	0x000bb324
    b8604:	abcd330e 	.word	0xabcd330e
    b8608:	e66d1234 	.word	0xe66d1234
    b860c:	0005deec 	.word	0x0005deec
@@ -11234,7 +11234,7 @@ USARTSerial& __fetch_global_Serial1()
    b8906:	f04f 0c01 	mov.w	ip, #1
    b890a:	e7f6      	b.n	b88fa <_strtod_l+0x28a>
    b890c:	000bb54c 	.word	0x000bb54c
-   b8910:	000bb388 	.word	0x000bb388
+   b8910:	000bb384 	.word	0x000bb384
    b8914:	7ff00000 	.word	0x7ff00000
    b8918:	9a17      	ldr	r2, [sp, #92]	; 0x5c
    b891a:	1c51      	adds	r1, r2, #1
@@ -11523,11 +11523,11 @@ USARTSerial& __fetch_global_Serial1()
    b8bfa:	6023      	str	r3, [r4, #0]
    b8bfc:	e786      	b.n	b8b0c <_strtod_l+0x49c>
    b8bfe:	bf00      	nop
-   b8c00:	000bb0cd 	.word	0x000bb0cd
-   b8c04:	000bb39c 	.word	0x000bb39c
-   b8c08:	000bb0d1 	.word	0x000bb0d1
-   b8c0c:	000bb381 	.word	0x000bb381
-   b8c10:	000baa38 	.word	0x000baa38
+   b8c00:	000bb0c9 	.word	0x000bb0c9
+   b8c04:	000bb398 	.word	0x000bb398
+   b8c08:	000bb0cd 	.word	0x000bb0cd
+   b8c0c:	000bb37d 	.word	0x000bb37d
+   b8c10:	000baa34 	.word	0x000baa34
    b8c14:	000bb5e8 	.word	0x000bb5e8
    b8c18:	000bb5c0 	.word	0x000bb5c0
    b8c1c:	7ff00000 	.word	0x7ff00000
@@ -13001,7 +13001,7 @@ USARTSerial& __fetch_global_Serial1()
    b9ad4:	e9c0 3303 	strd	r3, r3, [r0, #12]
    b9ad8:	e7f7      	b.n	b9aca <_Balloc+0x66>
    b9ada:	bf00      	nop
-   b9adc:	000bb311 	.word	0x000bb311
+   b9adc:	000bb30d 	.word	0x000bb30d
    b9ae0:	000bb560 	.word	0x000bb560
 
 000b9ae4 <_Bfree>:
@@ -13030,7 +13030,7 @@ USARTSerial& __fetch_global_Serial1()
    b9b18:	6021      	str	r1, [r4, #0]
    b9b1a:	f843 4022 	str.w	r4, [r3, r2, lsl #2]
    b9b1e:	bd70      	pop	{r4, r5, r6, pc}
-   b9b20:	000bb311 	.word	0x000bb311
+   b9b20:	000bb30d 	.word	0x000bb30d
    b9b24:	000bb560 	.word	0x000bb560
 
 000b9b28 <__multadd>:
@@ -13434,7 +13434,7 @@ USARTSerial& __fetch_global_Serial1()
    b9f0a:	e8bd 83f8 	ldmia.w	sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
    b9f0e:	bf00      	nop
    b9f10:	000bb6b0 	.word	0x000bb6b0
-   b9f14:	000bb311 	.word	0x000bb311
+   b9f14:	000bb30d 	.word	0x000bb30d
    b9f18:	000bb560 	.word	0x000bb560
 
 000b9f1c <__lshift>:
@@ -13946,361 +13946,360 @@ USARTSerial& __fetch_global_Serial1()
    ba444:	000b4ab9 000b4af5 000b4b1d 000b4b21     .J...J...K..!K..
    ba454:	00000000 6c6c6143 206e6f20 65727570     ....Call on pure
    ba464:	72697620 6c617574 6e655300 65740064      virtual.Send.te
-   ba474:	6f747473 2f636970 63697045 69706f54     sttopic/EpicTopi
-   ba484:	74003163 74747365 6369706f 6970452f     c1.testtopic/Epi
-   ba494:	706f5463 00326369 74736574 69706f74     cTopic2.testtopi
-   ba4a4:	70452f63 6f546369 33636970 44494400     c/EpicTopic3.DID
-   ba4b4:	2054274e 4b524f57 00732500 0054414c     N'T WORK.%s.LAT.
-   ba4c4:	474e4f4c 62616c00 6568742e 2e6c6377     LONG.lab.thewcl.
-   ba4d4:	006d6f63                                com.
+   ba474:	6f747473 2f636970 696d6152 6c6f6f43     sttopic/RamiCool
+   ba484:	73657400 706f7474 522f6369 43696d61     .testtopic/RamiC
+   ba494:	326c6f6f 73657400 706f7474 522f6369     ool2.testtopic/R
+   ba4a4:	43696d61 316c6f6f 44494400 2054274e     amiCool1.DIDN'T 
+   ba4b4:	4b524f57 00732500 0054414c 474e4f4c     WORK.%s.LAT.LONG
+   ba4c4:	62616c00 6568742e 2e6c6377 006d6f63     .lab.thewcl.com.
 
-000ba4d8 <_ZL4font>:
-   ba4d8:	00000000 4f5b3e00 6b3e3e5b 1c3e6b4f     .....>[O[>>kOk>.
-   ba4e8:	1c3e7c3e 3c7e3c18 7d571c18 5e1c1c57     >|>..<~<..W}W..^
-   ba4f8:	001c5e7f 00183c18 e7c3e7ff 241800ff     .^...<.........$
-   ba508:	e7ff0018 30ffe7db 0e063a48 29792926     .......0H:..&)y)
-   ba518:	057f4026 7f400705 5a3f2505 5a3ce73c     &@....@..%?Z<.<Z
-   ba528:	1c1c3e7f 1c1c0808 22147f3e 5f14227f     .>......>.."."._
-   ba538:	5f5f005f 017f0906 8966007f 60606a95     _.__......f..j``
-   ba548:	94606060 94a2ffa2 047e0408 7e201008     ```.......~... ~
-   ba558:	08081020 08081c2a 08082a1c 1010101e      ...*....*......
-   ba568:	0c1e0c10 38300c1e 0630383e 060e3e0e     ......08>80..>..
-   ba578:	00000000 5f000000 07000000 14000700     ......._........
-   ba588:	147f147f 2a7f2a24 08132312 49366264     ....$*.*.#..db6I
-   ba598:	00502056 00030708 41221c00 22410000     V P......."A..A"
-   ba5a8:	1c2a001c 082a1c7f 08083e08 30708000     ..*...*..>....p0
-   ba5b8:	08080800 00000808 20006060 02040810     ........``. ....
-   ba5c8:	4549513e 7f42003e 49720040 21464949     >QIE>.B.@.rIIIF!
-   ba5d8:	334d4941 7f121418 45452710 4a3c3945     AIM3.....'EEE9<J
-   ba5e8:	41314949 07091121 49494936 49494636     II1A!...6III6FII
-   ba5f8:	00001e29 00000014 00003440 22140800     ).......@4....."
-   ba608:	14141441 41001414 02081422 06095901     A......A"....Y..
-   ba618:	595d413e 11127c4e 497f7c12 3e364949     >A]YN|...|.III6>
-   ba628:	22414141 4141417f 49497f3e 097f4149     AAA".AAA>.IIIA..
-   ba638:	3e010909 73514141 0808087f 7f41007f     ...>AAQs......A.
-   ba648:	40200041 7f013f41 41221408 4040407f     A. @A?...."A.@@@
-   ba658:	1c027f40 047f7f02 3e7f1008 3e414141     @..........>AAA>
-   ba668:	0909097f 51413e06 097f5e21 26462919     .....>AQ!^...)F&
-   ba678:	32494949 017f0103 40403f03 201f3f40     III2.....?@@@?. 
-   ba688:	3f1f2040 3f403840 14081463 78040363     @ .?@8@?c...c..x
-   ba698:	59610304 00434d49 4141417f 10080402     ..aYIMC..AAA....
-   ba6a8:	41410020 02047f41 40040201 40404040      .AAA......@@@@@
-   ba6b8:	08070300 54542000 287f4078 38384444     ..... TTx@.(DD88
-   ba6c8:	28444444 28444438 5454387f 08001854     DDD(8DD(.8TTT...
-   ba6d8:	1802097e 789ca4a4 0404087f 7d440078     ~......x....x.D}
-   ba6e8:	40200040 7f003d40 00442810 407f4100     @. @@=...(D..A.@
-   ba6f8:	78047c00 087c7804 38780404 38444444     .|.x.x|...x8DDD8
-   ba708:	242418fc 24241818 087cfc18 48080404     ..$$..$$..|....H
-   ba718:	24545454 443f0404 40403c24 201c7c20     TTT$..?D$<@@ |. 
-   ba728:	3c1c2040 3c403040 28102844 90904c44     @ .<@0@<D(.(DL..
-   ba738:	64447c90 00444c54 00413608 00770000     .|DdTLD..6A...w.
-   ba748:	36410000 01020008 3c020402 3c262326     ..A6.......<&#&<
-   ba758:	61a1a11e 40403a12 54387a20 21595554     ...a.:@@ z8TTUY!
-   ba768:	41795555 78545422 54552142 54204078     UUyA"TTxB!UTx@ T
-   ba778:	0c407955 1272521e 55555539 54543959     Uy@..Rr.9UUUY9TT
-   ba788:	55395954 00585454 417c4500 7d450200     TY9UTTX..E|A..E}
-   ba798:	45010042 127d407c f07d1211 f0282528     B..E|@}...}.(%(.
-   ba7a8:	4555547c 54542000 0a7c547c 32497f09     |TUE. TT|T|...I2
-   ba7b8:	32494949 4444443a 484a323a 413a3048     III2:DDD:2JHH0:A
-   ba7c8:	3a7a2141 78204042 a0a09d00 42423d7d     A!z:B@ x....}=BB
-   ba7d8:	403d3d42 3c3d4040 2424ff24 43497e48     B==@@@=<$.$$H~IC
-   ba7e8:	fc2f2b66 09ff2b2f c020f629 03097e88     f+/./+..). ..~..
-   ba7f8:	79545420 44000041 4830417d 38324a48      TTyA..D}A0HHJ28
-   ba808:	7a224040 0a0a7a00 190d7d72 29267d31     @@"z.z..r}..1}&)
-   ba818:	26282f29 26292929 404d4830 08083820     )/(&)))&0HM@ 8..
-   ba828:	08080808 2f380808 baacc810 3428102f     ......8/..../.(4
-   ba838:	7b0000fa 14080000 2222142a 08142a14     ...{....*."".*..
-   ba848:	00550055 aa55aa55 55ffaa55 00ff55ff     U.U.U.U.U..U.U..
-   ba858:	00ff0000 ff101010 14141400 101000ff     ................
-   ba868:	10ff00ff f010f010 fc141414 f7141400     ................
-   ba878:	0000ff00 14ff00ff fc04f414 10171414     ................
-   ba888:	1f10101f 14141f10 10001f14 00f01010     ................
-   ba898:	1f000000 10101010 1010101f 0010f010     ................
-   ba8a8:	10ff0000 10101010 10101010 000010ff     ................
-   ba8b8:	0014ff00 ff00ff00 101f0000 fc000017     ................
-   ba8c8:	1414f404 14171017 f404f414 00ff0000     ................
-   ba8d8:	141414f7 14141414 14f700f7 14171414     ................
-   ba8e8:	101f1010 1414141f 101014f4 00f010f0     ................
-   ba8f8:	1f101f00 1f000000 00000014 000014fc     ................
-   ba908:	10f010f0 ff10ff10 ff141414 10101014     ................
-   ba918:	0000001f ff10f000 ffffffff f0f0f0f0     ................
-   ba928:	fffffff0 00000000 0fffff00 0f0f0f0f     ................
-   ba938:	38444438 4a4afc44 027e344a 02060602     8DD8D.JJJ4~.....
-   ba948:	027e027e 41495563 44443863 7e40043c     ~.~.cUIAc8DD<.@~
-   ba958:	06201e20 02027e02 a5e7a599 492a1c99      . ..~........*I
-   ba968:	724c1c2a 304c7201 304d4d4a 48784830     *.Lr.rL0JMM00HxH
-   ba978:	5a62bc30 493e3d46 7e004949 7e010101     0.bZF=>III.~...~
-   ba988:	2a2a2a2a 5f44442a 51404444 4040444a     *****DD_DD@QJD@@
-   ba998:	40514a44 01ff0000 ff80e003 08080000     DJQ@............
-   ba9a8:	36086b6b 36243612 0f090f06 18000006     kk.6.6$6........
-   ba9b8:	00000018 30001010 0101ff40 01011f00     .......0@.......
-   ba9c8:	1d19001e 3c001217 003c3c3c 00000000     .......<<<<.....
+000ba4d4 <_ZL4font>:
+   ba4d4:	00000000 4f5b3e00 6b3e3e5b 1c3e6b4f     .....>[O[>>kOk>.
+   ba4e4:	1c3e7c3e 3c7e3c18 7d571c18 5e1c1c57     >|>..<~<..W}W..^
+   ba4f4:	001c5e7f 00183c18 e7c3e7ff 241800ff     .^...<.........$
+   ba504:	e7ff0018 30ffe7db 0e063a48 29792926     .......0H:..&)y)
+   ba514:	057f4026 7f400705 5a3f2505 5a3ce73c     &@....@..%?Z<.<Z
+   ba524:	1c1c3e7f 1c1c0808 22147f3e 5f14227f     .>......>.."."._
+   ba534:	5f5f005f 017f0906 8966007f 60606a95     _.__......f..j``
+   ba544:	94606060 94a2ffa2 047e0408 7e201008     ```.......~... ~
+   ba554:	08081020 08081c2a 08082a1c 1010101e      ...*....*......
+   ba564:	0c1e0c10 38300c1e 0630383e 060e3e0e     ......08>80..>..
+   ba574:	00000000 5f000000 07000000 14000700     ......._........
+   ba584:	147f147f 2a7f2a24 08132312 49366264     ....$*.*.#..db6I
+   ba594:	00502056 00030708 41221c00 22410000     V P......."A..A"
+   ba5a4:	1c2a001c 082a1c7f 08083e08 30708000     ..*...*..>....p0
+   ba5b4:	08080800 00000808 20006060 02040810     ........``. ....
+   ba5c4:	4549513e 7f42003e 49720040 21464949     >QIE>.B.@.rIIIF!
+   ba5d4:	334d4941 7f121418 45452710 4a3c3945     AIM3.....'EEE9<J
+   ba5e4:	41314949 07091121 49494936 49494636     II1A!...6III6FII
+   ba5f4:	00001e29 00000014 00003440 22140800     ).......@4....."
+   ba604:	14141441 41001414 02081422 06095901     A......A"....Y..
+   ba614:	595d413e 11127c4e 497f7c12 3e364949     >A]YN|...|.III6>
+   ba624:	22414141 4141417f 49497f3e 097f4149     AAA".AAA>.IIIA..
+   ba634:	3e010909 73514141 0808087f 7f41007f     ...>AAQs......A.
+   ba644:	40200041 7f013f41 41221408 4040407f     A. @A?...."A.@@@
+   ba654:	1c027f40 047f7f02 3e7f1008 3e414141     @..........>AAA>
+   ba664:	0909097f 51413e06 097f5e21 26462919     .....>AQ!^...)F&
+   ba674:	32494949 017f0103 40403f03 201f3f40     III2.....?@@@?. 
+   ba684:	3f1f2040 3f403840 14081463 78040363     @ .?@8@?c...c..x
+   ba694:	59610304 00434d49 4141417f 10080402     ..aYIMC..AAA....
+   ba6a4:	41410020 02047f41 40040201 40404040      .AAA......@@@@@
+   ba6b4:	08070300 54542000 287f4078 38384444     ..... TTx@.(DD88
+   ba6c4:	28444444 28444438 5454387f 08001854     DDD(8DD(.8TTT...
+   ba6d4:	1802097e 789ca4a4 0404087f 7d440078     ~......x....x.D}
+   ba6e4:	40200040 7f003d40 00442810 407f4100     @. @@=...(D..A.@
+   ba6f4:	78047c00 087c7804 38780404 38444444     .|.x.x|...x8DDD8
+   ba704:	242418fc 24241818 087cfc18 48080404     ..$$..$$..|....H
+   ba714:	24545454 443f0404 40403c24 201c7c20     TTT$..?D$<@@ |. 
+   ba724:	3c1c2040 3c403040 28102844 90904c44     @ .<@0@<D(.(DL..
+   ba734:	64447c90 00444c54 00413608 00770000     .|DdTLD..6A...w.
+   ba744:	36410000 01020008 3c020402 3c262326     ..A6.......<&#&<
+   ba754:	61a1a11e 40403a12 54387a20 21595554     ...a.:@@ z8TTUY!
+   ba764:	41795555 78545422 54552142 54204078     UUyA"TTxB!UTx@ T
+   ba774:	0c407955 1272521e 55555539 54543959     Uy@..Rr.9UUUY9TT
+   ba784:	55395954 00585454 417c4500 7d450200     TY9UTTX..E|A..E}
+   ba794:	45010042 127d407c f07d1211 f0282528     B..E|@}...}.(%(.
+   ba7a4:	4555547c 54542000 0a7c547c 32497f09     |TUE. TT|T|...I2
+   ba7b4:	32494949 4444443a 484a323a 413a3048     III2:DDD:2JHH0:A
+   ba7c4:	3a7a2141 78204042 a0a09d00 42423d7d     A!z:B@ x....}=BB
+   ba7d4:	403d3d42 3c3d4040 2424ff24 43497e48     B==@@@=<$.$$H~IC
+   ba7e4:	fc2f2b66 09ff2b2f c020f629 03097e88     f+/./+..). ..~..
+   ba7f4:	79545420 44000041 4830417d 38324a48      TTyA..D}A0HHJ28
+   ba804:	7a224040 0a0a7a00 190d7d72 29267d31     @@"z.z..r}..1}&)
+   ba814:	26282f29 26292929 404d4830 08083820     )/(&)))&0HM@ 8..
+   ba824:	08080808 2f380808 baacc810 3428102f     ......8/..../.(4
+   ba834:	7b0000fa 14080000 2222142a 08142a14     ...{....*."".*..
+   ba844:	00550055 aa55aa55 55ffaa55 00ff55ff     U.U.U.U.U..U.U..
+   ba854:	00ff0000 ff101010 14141400 101000ff     ................
+   ba864:	10ff00ff f010f010 fc141414 f7141400     ................
+   ba874:	0000ff00 14ff00ff fc04f414 10171414     ................
+   ba884:	1f10101f 14141f10 10001f14 00f01010     ................
+   ba894:	1f000000 10101010 1010101f 0010f010     ................
+   ba8a4:	10ff0000 10101010 10101010 000010ff     ................
+   ba8b4:	0014ff00 ff00ff00 101f0000 fc000017     ................
+   ba8c4:	1414f404 14171017 f404f414 00ff0000     ................
+   ba8d4:	141414f7 14141414 14f700f7 14171414     ................
+   ba8e4:	101f1010 1414141f 101014f4 00f010f0     ................
+   ba8f4:	1f101f00 1f000000 00000014 000014fc     ................
+   ba904:	10f010f0 ff10ff10 ff141414 10101014     ................
+   ba914:	0000001f ff10f000 ffffffff f0f0f0f0     ................
+   ba924:	fffffff0 00000000 0fffff00 0f0f0f0f     ................
+   ba934:	38444438 4a4afc44 027e344a 02060602     8DD8D.JJJ4~.....
+   ba944:	027e027e 41495563 44443863 7e40043c     ~.~.cUIAc8DD<.@~
+   ba954:	06201e20 02027e02 a5e7a599 492a1c99      . ..~........*I
+   ba964:	724c1c2a 304c7201 304d4d4a 48784830     *.Lr.rL0JMM00HxH
+   ba974:	5a62bc30 493e3d46 7e004949 7e010101     0.bZF=>III.~...~
+   ba984:	2a2a2a2a 5f44442a 51404444 4040444a     *****DD_DD@QJD@@
+   ba994:	40514a44 01ff0000 ff80e003 08080000     DJQ@............
+   ba9a4:	36086b6b 36243612 0f090f06 18000006     kk.6.6$6........
+   ba9b4:	00000018 30001010 0101ff40 01011f00     .......0@.......
+   ba9c4:	1d19001e 3c001217 003c3c3c 00000000     .......<<<<.....
 
-000ba9d8 <_ZTV12Adafruit_GFX>:
+000ba9d4 <_ZTV12Adafruit_GFX>:
 	...
-   ba9e8:	000b547d 000b7271 000b4b41 000b4e83     }T..qr..AK...N..
-   ba9f8:	000b4e85 000b4eb7 000b4e93 000b4ea5     .N...N...N...N..
-   baa08:	000b4dc5 000b4e83 000b50af 000b50ad     .M...N...P...P..
-   baa18:	000b4ecf 000b4f0d 000b4f47 000b4f8d     .N...O..GO...O..
-   baa28:	000b4fa9 000b502d 61666564 20746c75     .O..-P..default 
-   baa38:	42534d00 42534c00 50533c00 74655349     .MSB.LSB.<SPISet
-   baa48:	676e6974 65642073 6c756166 3c003e74     tings default>.<
-   baa58:	53495053 69747465 2073676e 75257325     SPISettings %s%u
-   baa68:	20732520 45444f4d 003e7525               %s MODE%u>.
+   ba9e4:	000b547d 000b7271 000b4b41 000b4e83     }T..qr..AK...N..
+   ba9f4:	000b4e85 000b4eb7 000b4e93 000b4ea5     .N...N...N...N..
+   baa04:	000b4dc5 000b4e83 000b50af 000b50ad     .M...N...P...P..
+   baa14:	000b4ecf 000b4f0d 000b4f47 000b4f8d     .N...O..GO...O..
+   baa24:	000b4fa9 000b502d 61666564 20746c75     .O..-P..default 
+   baa34:	42534d00 42534c00 50533c00 74655349     .MSB.LSB.<SPISet
+   baa44:	676e6974 65642073 6c756166 3c003e74     tings default>.<
+   baa54:	53495053 69747465 2073676e 75257325     SPISettings %s%u
+   baa64:	20732520 45444f4d 003e7525               %s MODE%u>.
 
-000baa74 <_ZTVN8particle11SPISettingsE>:
+000baa70 <_ZTVN8particle11SPISettingsE>:
 	...
-   baa7c:	000b559d 000b558b 000b558d              .U...U...U..
+   baa78:	000b559d 000b558b 000b558d              .U...U...U..
 
-000baa88 <_ZL12splash1_data>:
-   baa88:	00000000 00800100 00000000 00000000     ................
-   baa98:	00008003 00000000 07000000 000000c0     ................
-   baaa8:	00000000 c0070000 00000000 00000000     ................
-   baab8:	00c00f00 00000000 00000000 0000e01f     ................
-   baac8:	00000000 1f000000 000000e0 00000000     ................
-   baad8:	e03f0000 00000000 00000000 00f03f00     ..?..........?..
+000baa84 <_ZL12splash1_data>:
+   baa84:	00000000 00800100 00000000 00000000     ................
+   baa94:	00008003 00000000 07000000 000000c0     ................
+   baaa4:	00000000 c0070000 00000000 00000000     ................
+   baab4:	00c00f00 00000000 00000000 0000e01f     ................
+   baac4:	00000000 1f000000 000000e0 00000000     ................
+   baad4:	e03f0000 00000000 00000000 00f03f00     ..?..........?..
 	...
-   baaf0:	0000f07f 00000000 7ff81f00 000000f0     ................
-   bab00:	00000000 f07ffe3f 00000000 3f000000     ....?..........?
-   bab10:	00f07fff 00000000 ff1f0000 0000e0fb     ................
-   bab20:	00000000 f9ff0f00 0000c0ff 00000000     ................
-   bab30:	fff9ff0f 000000f8 07000000 fffff1ff     ................
-   bab40:	00000000 fc030000 80ffff73 00000000     ........s.......
-   bab50:	3ffe0100 0080ffff 00000000 0f1eff00     ...?............
-   bab60:	000000ff 00000000 fc1ffe7f 00000000     ................
-   bab70:	3f000000 00f8ffff 00000000 df0f0000     ...?............
-   bab80:	0000e0ff 00000000 ff191f00 000000c0     ................
-   bab90:	00000000 00ff3c3f 00000000 7e000000     ....?<.........~
-   baba0:	0000f87c 00000000 fe7f0000 0000007c     |...........|...
-   babb0:	00000000 fcffff00 00000000 00000000     ................
-   babc0:	00feffff 00000000 ff000000 0000feff     ................
-   babd0:	00000000 efff0100 000000fe 00000000     ................
-   babe0:	fecfff01 00000000 03000000 00fe07ff     ................
-   babf0:	00000000 fc030000 0000fe07 00000000     ................
-   bac00:	03f00300 000000fe 00000000 fe008001     ................
+   baaec:	0000f07f 00000000 7ff81f00 000000f0     ................
+   baafc:	00000000 f07ffe3f 00000000 3f000000     ....?..........?
+   bab0c:	00f07fff 00000000 ff1f0000 0000e0fb     ................
+   bab1c:	00000000 f9ff0f00 0000c0ff 00000000     ................
+   bab2c:	fff9ff0f 000000f8 07000000 fffff1ff     ................
+   bab3c:	00000000 fc030000 80ffff73 00000000     ........s.......
+   bab4c:	3ffe0100 0080ffff 00000000 0f1eff00     ...?............
+   bab5c:	000000ff 00000000 fc1ffe7f 00000000     ................
+   bab6c:	3f000000 00f8ffff 00000000 df0f0000     ...?............
+   bab7c:	0000e0ff 00000000 ff191f00 000000c0     ................
+   bab8c:	00000000 00ff3c3f 00000000 7e000000     ....?<.........~
+   bab9c:	0000f87c 00000000 fe7f0000 0000007c     |...........|...
+   babac:	00000000 fcffff00 00000000 00000000     ................
+   babbc:	00feffff 00000000 ff000000 0000feff     ................
+   babcc:	00000000 efff0100 000000fe 00000000     ................
+   babdc:	fecfff01 00000000 03000000 00fe07ff     ................
+   babec:	00000000 fc030000 0000fe07 00000000     ................
+   babfc:	03f00300 000000fe 00000000 fe008001     ................
 	...
-   bac18:	007e0000 00000000 00000000 00003e00     ..~..........>..
+   bac14:	007e0000 00000000 00000000 00003e00     ..~..........>..
 	...
-   bac30:	0000000c 07000000 00fc0080 00c00300     ................
-   bac40:	80070000 0000fc01 0000c003 01800700     ................
-   bac50:	030000fc 000000c0 e0018007 1e000000     ................
-   bac60:	07000000 00e00180 001e0000 9ff7e37f     ................
-   bac70:	78e7fdf9 ffc0df7b fdbffff7 7b78fffd     ...x{.........x{
-   bac80:	f7ffc0df fdfdbfff df7b78ff 87f7f0c0     .........x{.....
-   bac90:	ffe13dbc 00de7b78 bc87f7f0 78f0e13d     .=..x{......=..x
-   baca0:	0000de7b 3d8087f7 7b78e0e1 f77f00de     {......=..x{....
-   bacb0:	e1fd9f87 de7b78e0 87f7ff00 e0e1fdbf     .....x{.........
-   bacc0:	00de7b78 bc87f7f0 78e0e13d f000de7b     x{......=..x{...
-   bacd0:	3dbc87f7 7b78e0e1 f7f000de e13dbc87     ...=..x{......=.
-   bace0:	de7b78e0 fff7ff00 e0e1fdbf c0dffb7f     .x{.............
-   bacf0:	bffff7ff 7fe0e1fd 7cc0dffb 3d9ff3f3     ...........|...=
-   bad00:	7b3ee0e1 0000c0cf 00000000 00000000     ..>{............
-   bad10:	ffffff00 ffffffff c0ffffff ffffffff     ................
-   bad20:	11db68fd ffc0311a fdffffff 6afb5a2b     .h...1......+Z.j
-   bad30:	ffffc0ef 4bfdffff 331a3b5b ffffffc0     .......K[;.3....
-   bad40:	5b6bfdff c0fd6adb                       ..k[.j..
+   bac2c:	0000000c 07000000 00fc0080 00c00300     ................
+   bac3c:	80070000 0000fc01 0000c003 01800700     ................
+   bac4c:	030000fc 000000c0 e0018007 1e000000     ................
+   bac5c:	07000000 00e00180 001e0000 9ff7e37f     ................
+   bac6c:	78e7fdf9 ffc0df7b fdbffff7 7b78fffd     ...x{.........x{
+   bac7c:	f7ffc0df fdfdbfff df7b78ff 87f7f0c0     .........x{.....
+   bac8c:	ffe13dbc 00de7b78 bc87f7f0 78f0e13d     .=..x{......=..x
+   bac9c:	0000de7b 3d8087f7 7b78e0e1 f77f00de     {......=..x{....
+   bacac:	e1fd9f87 de7b78e0 87f7ff00 e0e1fdbf     .....x{.........
+   bacbc:	00de7b78 bc87f7f0 78e0e13d f000de7b     x{......=..x{...
+   baccc:	3dbc87f7 7b78e0e1 f7f000de e13dbc87     ...=..x{......=.
+   bacdc:	de7b78e0 fff7ff00 e0e1fdbf c0dffb7f     .x{.............
+   bacec:	bffff7ff 7fe0e1fd 7cc0dffb 3d9ff3f3     ...........|...=
+   bacfc:	7b3ee0e1 0000c0cf 00000000 00000000     ..>{............
+   bad0c:	ffffff00 ffffffff c0ffffff ffffffff     ................
+   bad1c:	11db68fd ffc0311a fdffffff 6afb5a2b     .h...1......+Z.j
+   bad2c:	ffffc0ef 4bfdffff 331a3b5b ffffffc0     .......K[;.3....
+   bad3c:	5b6bfdff c0fd6adb                       ..k[.j..
 
-000bad48 <_ZL12splash2_data>:
-   bad48:	00600000 00000000 00000000 00000000     ..`.............
-   bad58:	0000e000 00000000 00000000 01000000     ................
-   bad68:	000000e0 00000000 00000000 f0010000     ................
+000bad44 <_ZL12splash2_data>:
+   bad44:	00600000 00000000 00000000 00000000     ..`.............
+   bad54:	0000e000 00000000 00000000 01000000     ................
+   bad64:	000000e0 00000000 00000000 f0010000     ................
 	...
-   bad84:	00f00300 00000000 00000000 00000000     ................
-   bad94:	0000f007 00000000 00000000 07000000     ................
-   bada4:	000000f8 00000000 00000000 f80f0000     ................
-   badb4:	03000000 007e00c0 00e00100 00f80f7f     ......~.........
-   badc4:	c0030000 0000fe00 ff00e001 0000f8ef     ................
-   badd4:	00c00300 010000fe ffff00e0 000000f8     ................
-   bade4:	f000c003 0f000000 7ffe7f00 030000c0     ................
-   badf4:	00f000c0 000f0000 f87ffe3f cffbf13f     ........?...?...
-   bae04:	bcf3fefc 1fe0ef3d 7fff7ffe fedffffb     ....=...........
-   bae14:	3dbcfffe c61fe0ef fb7fffff fefedfff     ...=............
-   bae24:	ef3dbcff c7e30fe0 c37b78fe fff01ede     ..=......x{.....
-   bae34:	00ef3dbc fc87ff07 dec37b78 3cf8f01e     .=......x{.....<
-   bae44:	0100ef3d 00f0ffff 1ec0c37b 3d3cf0f0     =.......{.....<=
-   bae54:	f30100ef fb3fe07f f0fecfc3 ef3d3cf0     ......?......<=.
-   bae64:	3fe30300 c3fb7f80 f0f0fedf 00ef3d3c     ...?........<=..
-   bae74:	003ce707 dec37b78 3cf0f01e 0700ef3d     ..<.x{.....<=...
-   bae84:	7800beff 1edec37b 3d3cf0f0 ff0700ef     ...x{.....<=....
-   bae94:	7b7800fe f01edec3 ef3d3cf0 feff0f00     ..x{.....<=.....
-   baea4:	fffb7f00 f0f0fedf e0effd3f 00ffff0f     ........?.......
-   baeb4:	dffffb7f 3ff0f0fe 0fe0effd 3e00fff9     .......?.......>
-   baec4:	9ecff979 3d1ff0f0 f11fe0e7 000000ff     y......=........
+   bad80:	00f00300 00000000 00000000 00000000     ................
+   bad90:	0000f007 00000000 00000000 07000000     ................
+   bada0:	000000f8 00000000 00000000 f80f0000     ................
+   badb0:	03000000 007e00c0 00e00100 00f80f7f     ......~.........
+   badc0:	c0030000 0000fe00 ff00e001 0000f8ef     ................
+   badd0:	00c00300 010000fe ffff00e0 000000f8     ................
+   bade0:	f000c003 0f000000 7ffe7f00 030000c0     ................
+   badf0:	00f000c0 000f0000 f87ffe3f cffbf13f     ........?...?...
+   bae00:	bcf3fefc 1fe0ef3d 7fff7ffe fedffffb     ....=...........
+   bae10:	3dbcfffe c61fe0ef fb7fffff fefedfff     ...=............
+   bae20:	ef3dbcff c7e30fe0 c37b78fe fff01ede     ..=......x{.....
+   bae30:	00ef3dbc fc87ff07 dec37b78 3cf8f01e     .=......x{.....<
+   bae40:	0100ef3d 00f0ffff 1ec0c37b 3d3cf0f0     =.......{.....<=
+   bae50:	f30100ef fb3fe07f f0fecfc3 ef3d3cf0     ......?......<=.
+   bae60:	3fe30300 c3fb7f80 f0f0fedf 00ef3d3c     ...?........<=..
+   bae70:	003ce707 dec37b78 3cf0f01e 0700ef3d     ..<.x{.....<=...
+   bae80:	7800beff 1edec37b 3d3cf0f0 ff0700ef     ...x{.....<=....
+   bae90:	7b7800fe f01edec3 ef3d3cf0 feff0f00     ..x{.....<=.....
+   baea0:	fffb7f00 f0f0fedf e0effd3f 00ffff0f     ........?.......
+   baeb0:	dffffb7f 3ff0f0fe 0fe0effd 3e00fff9     .......?.......>
+   baec0:	9ecff979 3d1ff0f0 f11fe0e7 000000ff     y......=........
 	...
-   baedc:	ff801f00 ffff7f00 ffffffff e0ffffff     ................
-   baeec:	007f001c ffffff7f 886db4fe 00e0188d     ..........m.....
-   baefc:	7f001f00 feffffff b57dad95 0000e077     ..........}.w...
-   baf0c:	ff7f000f a5feffff 198d9dad 060000e0     ................
-   baf1c:	ffff7f00 adb5feff e07eb5ed              ..........~.
+   baed8:	ff801f00 ffff7f00 ffffffff e0ffffff     ................
+   baee8:	007f001c ffffff7f 886db4fe 00e0188d     ..........m.....
+   baef8:	7f001f00 feffffff b57dad95 0000e077     ..........}.w...
+   baf08:	ff7f000f a5feffff 198d9dad 060000e0     ................
+   baf18:	ffff7f00 adb5feff e07eb5ed              ..........~.
 
-000baf28 <_ZTV16Adafruit_SSD1306>:
+000baf24 <_ZTV16Adafruit_SSD1306>:
 	...
-   baf30:	000b55f1 000b5609 000b547d 000b7271     .U...V..}T..qr..
-   baf40:	000b561d 000b4e83 000b4e85 000b4eb7     .V...N...N...N..
-   baf50:	000b4e93 000b4ea5 000b4dc5 000b4e83     .N...N...M...N..
-   baf60:	000b50af 000b57bb 000b5d63 000b5d15     .P...W..c]...]..
-   baf70:	000b4f47 000b4f8d 000b4fa9 000b502d     GO...O...O..-P..
+   baf2c:	000b55f1 000b5609 000b547d 000b7271     .U...V..}T..qr..
+   baf3c:	000b561d 000b4e83 000b4e85 000b4eb7     .V...N...N...N..
+   baf4c:	000b4e93 000b4ea5 000b4dc5 000b4e83     .N...N...M...N..
+   baf5c:	000b50af 000b57bb 000b5d63 000b5d15     .P...W..c]...]..
+   baf6c:	000b4f47 000b4f8d 000b4fa9 000b502d     GO...O...O..-P..
 
-000baf80 <_ZZN16Adafruit_SSD130621drawFastVLineInternalEssstE7premask>:
-   baf80:	e0c08000 fefcf8f0                       ........
+000baf7c <_ZZN16Adafruit_SSD130621drawFastVLineInternalEssstE7premask>:
+   baf7c:	e0c08000 fefcf8f0                       ........
 
-000baf88 <_ZZN16Adafruit_SSD130621drawFastVLineInternalEssstE8postmask>:
-   baf88:	07030100 7f3f1f0f                       ......?.
+000baf84 <_ZZN16Adafruit_SSD130621drawFastVLineInternalEssstE8postmask>:
+   baf84:	07030100 7f3f1f0f                       ......?.
 
-000baf90 <_ZZN16Adafruit_SSD13065beginEhhbbE5init1>:
-   baf90:	a880d5ae                                ....
+000baf8c <_ZZN16Adafruit_SSD13065beginEhhbbE5init1>:
+   baf8c:	a880d5ae                                ....
 
-000baf94 <_ZZN16Adafruit_SSD13065beginEhhbbE5init2>:
-   baf94:	8d4000d3                                ..@.
+000baf90 <_ZZN16Adafruit_SSD13065beginEhhbbE5init2>:
+   baf90:	8d4000d3                                ..@.
 
-000baf98 <_ZZN16Adafruit_SSD13065beginEhhbbE5init3>:
-   baf98:	c8a10020                                 ...
+000baf94 <_ZZN16Adafruit_SSD13065beginEhhbbE5init3>:
+   baf94:	c8a10020                                 ...
 
-000baf9c <_ZZN16Adafruit_SSD13065beginEhhbbE5init5>:
-   baf9c:	a6a440db                                 .@....
+000baf98 <_ZZN16Adafruit_SSD13065beginEhhbbE5init5>:
+   baf98:	a6a440db                                 .@....
 
-000bafa2 <_ZZN16Adafruit_SSD13065beginEhhbbE6init4a>:
-   bafa2:	8f8102da                                ....
+000baf9e <_ZZN16Adafruit_SSD13065beginEhhbbE6init4a>:
+   baf9e:	8f8102da                                ....
 
-000bafa6 <_ZZN16Adafruit_SSD13065beginEhhbbE6init4b>:
-   bafa6:	                                         ...
+000bafa2 <_ZZN16Adafruit_SSD13065beginEhhbbE6init4b>:
+   bafa2:	                                         ...
 
-000bafa9 <_ZZN16Adafruit_SSD13065beginEhhbbE6init4c>:
-   bafa9:	                                         ...
+000bafa5 <_ZZN16Adafruit_SSD13065beginEhhbbE6init4c>:
+   bafa5:	                                         ...
 
-000bafac <_ZZN16Adafruit_SSD13067displayEvE6dlist1>:
-   bafac:	21ff0022 00000000                       "..!....
+000bafa8 <_ZZN16Adafruit_SSD13067displayEvE6dlist1>:
+   bafa8:	21ff0022 00000000                       "..!....
 
-000bafb4 <_ZTV16OledWingAdafruit>:
+000bafb0 <_ZTV16OledWingAdafruit>:
 	...
-   bafbc:	000b680d 000b682d 000b547d 000b7271     .h..-h..}T..qr..
-   bafcc:	000b561d 000b4e83 000b4e85 000b4eb7     .V...N...N...N..
-   bafdc:	000b4e93 000b4ea5 000b4dc5 000b4e83     .N...N...M...N..
-   bafec:	000b50af 000b57bb 000b5d63 000b5d15     .P...W..c]...]..
-   baffc:	000b4f47 000b4f8d 000b4fa9 000b502d     GO...O...O..-P..
+   bafb8:	000b680d 000b682d 000b547d 000b7271     .h..-h..}T..qr..
+   bafc8:	000b561d 000b4e83 000b4e85 000b4eb7     .V...N...N...N..
+   bafd8:	000b4e93 000b4ea5 000b4dc5 000b4e83     .N...N...M...N..
+   bafe8:	000b50af 000b57bb 000b5d63 000b5d15     .P...W..c]...]..
+   baff8:	000b4f47 000b4f8d 000b4fa9 000b502d     GO...O...O..-P..
 
-000bb00c <_ZZNSt19_Sp_make_shared_tag5_S_tiEvE5__tag>:
-	...
-
-000bb014 <_ZTVN5spark13EthernetClassE>:
-	...
-   bb01c:	000b6eff 000b6ef5 000b6eeb 000b6ee1     .n...n...n...n..
-   bb02c:	000b6ed5 000b6ec9 000b714d 000b7155     .n...n..Mq..Uq..
-   bb03c:	000b6ebd 000b6eb5 000b6eab 000b6ea1     .n...n...n...n..
-   bb04c:	000b7185                                .q..
-
-000bb050 <_ZTV7TwoWire>:
-	...
-   bb058:	000b6f1d 000b6f67 000b6f3f 000b6f1f     .o..go..?o...o..
-   bb068:	000b6f47 000b6f4f 000b6f57 000b6f5f     Go..Oo..Wo.._o..
-
-000bb078 <_ZTV9IPAddress>:
-	...
-   bb080:	000b6ff1 000b6fe1 000b6fe3 00707061     .o...o...o..app.
-
-000bb090 <_ZTVN5spark12NetworkClassE>:
-	...
-   bb098:	000b710d 000b7117 000b7121 000b712b     .q...q..!q..+q..
-   bb0a8:	000b7135 000b7141 000b714d 000b7155     5q..Aq..Mq..Uq..
-   bb0b8:	000b715d 000b7169 000b7171 000b717b     ]q..iq..qq..{q..
-   bb0c8:	000b7185 006e616e 00666e69 0066766f     .q..nan.inf.ovf.
-   bb0d8:	                                         ..
-
-000bb0da <_ZN12_GLOBAL__N_1L14clock_divisorsE>:
-   bb0da:	18100800 38302820 69726977 7200676e     .... (08wiring.r
-   bb0ea:	20766365 6f727265 203d2072 00006425     ecv error = %d..
+000bb008 <_ZZNSt19_Sp_make_shared_tag5_S_tiEvE5__tag>:
 	...
 
-000bb0fc <_ZTVSt23_Sp_counted_ptr_inplaceIN9TCPClient4DataESaIS1_ELN9__gnu_cxx12_Lock_policyE0EE>:
+000bb010 <_ZTVN5spark13EthernetClassE>:
 	...
-   bb104:	000b7889 000b78ad 000b7ddf 000b78bb     .x...x...}...x..
-   bb114:	000b788d                                .x..
+   bb018:	000b6eff 000b6ef5 000b6eeb 000b6ee1     .n...n...n...n..
+   bb028:	000b6ed5 000b6ec9 000b714d 000b7155     .n...n..Mq..Uq..
+   bb038:	000b6ebd 000b6eb5 000b6eab 000b6ea1     .n...n...n...n..
+   bb048:	000b7185                                .q..
 
-000bb118 <_ZTV9TCPClient>:
+000bb04c <_ZTV7TwoWire>:
 	...
-   bb120:	000b7939 000b796d 000b7805 000b781f     9y..my...x...x..
-   bb130:	000b7c75 000b7849 000b7aeb 000b787d     u|..Ix...z..}x..
-   bb140:	000b7b7d 000b79bd 000b7b19 000b7d29     }{...y...{..)}..
-   bb150:	000b7ab9 000b787f 000b7831 000b78c1     .z...x..1x...x..
-   bb160:	000b799d 252d5925 64252d6d 3a482554     .y..%Y-%m-%dT%H:
-   bb170:	253a4d25 007a2553 74637361 00656d69     %M:%S%z.asctime.
+   bb054:	000b6f1d 000b6f67 000b6f3f 000b6f1f     .o..go..?o...o..
+   bb064:	000b6f47 000b6f4f 000b6f57 000b6f5f     Go..Oo..Wo.._o..
 
-000bb180 <_ZTV11USARTSerial>:
+000bb074 <_ZTV9IPAddress>:
 	...
-   bb188:	000b7df9 000b7e65 000b7e3d 000b7271     .}..e~..=~..qr..
-   bb198:	000b7e0d 000b7e29 000b7e1b 000b7e37     .~..)~...~..7~..
-   bb1a8:	000b7dfb 000b7dff                       .}...}..
+   bb07c:	000b6ff1 000b6fe1 000b6fe3 00707061     .o...o...o..app.
 
-000bb1b0 <_ZTV9USBSerial>:
+000bb08c <_ZTVN5spark12NetworkClassE>:
 	...
-   bb1b8:	000b7ea3 000b7f0b 000b7ee1 000b7271     .~.......~..qr..
-   bb1c8:	000b7ed3 000b7ea5 000b7eb5 000b7f05     .~...~...~......
-   bb1d8:	000b7ec5 000b7e9d                       .~...~..
+   bb094:	000b710d 000b7117 000b7121 000b712b     .q...q..!q..+q..
+   bb0a4:	000b7135 000b7141 000b714d 000b7155     5q..Aq..Mq..Uq..
+   bb0b4:	000b715d 000b7169 000b7171 000b717b     ]q..iq..qq..{q..
+   bb0c4:	000b7185 006e616e 00666e69 0066766f     .q..nan.inf.ovf.
+   bb0d4:	                                         ..
 
-000bb1e0 <_ZTVN5spark9WiFiClassE>:
-	...
-   bb1e8:	000b8003 000b7ff9 000b7fef 000b7fa5     ................
-   bb1f8:	000b7fe3 000b7fd7 000b714d 000b7155     ........Mq..Uq..
-   bb208:	000b7fcb 000b7fc3 000b7fb9 000b7faf     ................
-   bb218:	000b7185                                .q..
-
-000bb21c <_ZSt7nothrow>:
+000bb0d6 <_ZN12_GLOBAL__N_1L14clock_divisorsE>:
+   bb0d6:	18100800 38302820 69726977 7200676e     .... (08wiring.r
+   bb0e6:	20766365 6f727265 203d2072 00006425     ecv error = %d..
 	...
 
-000bb21d <_ZTSSt19_Sp_make_shared_tag>:
-   bb21d:	39317453 5f70535f 656b616d 6168735f     St19_Sp_make_sha
-   bb22d:	5f646572 00676174                        red_tag....
+000bb0f8 <_ZTVSt23_Sp_counted_ptr_inplaceIN9TCPClient4DataESaIS1_ELN9__gnu_cxx12_Lock_policyE0EE>:
+	...
+   bb100:	000b7889 000b78ad 000b7ddf 000b78bb     .x...x...}...x..
+   bb110:	000b788d                                .x..
 
-000bb238 <_ZTISt19_Sp_make_shared_tag>:
-   bb238:	000bb278 000bb21d                       x.......
+000bb114 <_ZTV9TCPClient>:
+	...
+   bb11c:	000b7939 000b796d 000b7805 000b781f     9y..my...x...x..
+   bb12c:	000b7c75 000b7849 000b7aeb 000b787d     u|..Ix...z..}x..
+   bb13c:	000b7b7d 000b79bd 000b7b19 000b7d29     }{...y...{..)}..
+   bb14c:	000b7ab9 000b787f 000b7831 000b78c1     .z...x..1x...x..
+   bb15c:	000b799d 252d5925 64252d6d 3a482554     .y..%Y-%m-%dT%H:
+   bb16c:	253a4d25 007a2553 74637361 00656d69     %M:%S%z.asctime.
 
-000bb240 <_ZTIN10__cxxabiv117__class_type_infoE>:
-   bb240:	000bb2d8 000bb24c 000bb2fc              ....L.......
+000bb17c <_ZTV11USARTSerial>:
+	...
+   bb184:	000b7df9 000b7e65 000b7e3d 000b7271     .}..e~..=~..qr..
+   bb194:	000b7e0d 000b7e29 000b7e1b 000b7e37     .~..)~...~..7~..
+   bb1a4:	000b7dfb 000b7dff                       .}...}..
 
-000bb24c <_ZTSN10__cxxabiv117__class_type_infoE>:
-   bb24c:	5f30314e 7878635f 76696261 5f373131     N10__cxxabiv117_
-   bb25c:	616c635f 745f7373 5f657079 6f666e69     _class_type_info
-   bb26c:	00000045                                E...
+000bb1ac <_ZTV9USBSerial>:
+	...
+   bb1b4:	000b7ea3 000b7f0b 000b7ee1 000b7271     .~.......~..qr..
+   bb1c4:	000b7ed3 000b7ea5 000b7eb5 000b7f05     .~...~...~......
+   bb1d4:	000b7ec5 000b7e9d                       .~...~..
 
-000bb270 <_ZTVN10__cxxabiv117__class_type_infoE>:
-   bb270:	00000000 000bb240 000b839d 000b83b1     ....@...........
-   bb280:	000b8545 000b8545 000b841b 000b835d     E...E.......]...
-   bb290:	000b8403 000b83c5 000b838f              ............
+000bb1dc <_ZTVN5spark9WiFiClassE>:
+	...
+   bb1e4:	000b8003 000b7ff9 000b7fef 000b7fa5     ................
+   bb1f4:	000b7fe3 000b7fd7 000b714d 000b7155     ........Mq..Uq..
+   bb204:	000b7fcb 000b7fc3 000b7fb9 000b7faf     ................
+   bb214:	000b7185                                .q..
 
-000bb29c <_ZTIN10__cxxabiv120__si_class_type_infoE>:
-   bb29c:	000bb2d8 000bb2a8 000bb240              ........@...
+000bb218 <_ZSt7nothrow>:
+	...
 
-000bb2a8 <_ZTSN10__cxxabiv120__si_class_type_infoE>:
-   bb2a8:	5f30314e 7878635f 76696261 5f303231     N10__cxxabiv120_
-   bb2b8:	5f69735f 73616c63 79745f73 695f6570     _si_class_type_i
-   bb2c8:	456f666e 00000000                       nfoE....
+000bb219 <_ZTSSt19_Sp_make_shared_tag>:
+   bb219:	39317453 5f70535f 656b616d 6168735f     St19_Sp_make_sha
+   bb229:	5f646572 00676174                        red_tag....
 
-000bb2d0 <_ZTVN10__cxxabiv120__si_class_type_infoE>:
-   bb2d0:	00000000 000bb29c 000b8445 000b8459     ........E...Y...
-   bb2e0:	000b8545 000b8545 000b841b 000b835d     E...E.......]...
-   bb2f0:	000b8519 000b84a5 000b846d              ........m...
+000bb234 <_ZTISt19_Sp_make_shared_tag>:
+   bb234:	000bb274 000bb219                       t.......
 
-000bb2fc <_ZTISt9type_info>:
-   bb2fc:	000bb278 000bb304                       x.......
+000bb23c <_ZTIN10__cxxabiv117__class_type_infoE>:
+   bb23c:	000bb2d4 000bb248 000bb2f8              ....H.......
 
-000bb304 <_ZTSSt9type_info>:
-   bb304:	74397453 5f657079 6f666e69 45455200     St9type_info.REE
-   bb314:	6d20544e 6f6c6c61 75732063 65656363     NT malloc succee
-   bb324:	00646564 706d742f 6e656a2f 736e696b     ded./tmp/jenkins
-   bb334:	4343472d 2d30312d 65706970 656e696c     -GCC-10-pipeline
-   bb344:	5f38342d 30323032 34323131 3036315f     -48_20201124_160
-   bb354:	30383136 2f393336 2f637273 6c77656e     6180639/src/newl
-   bb364:	6e2f6269 696c7765 696c2f62 732f6362     ib/newlib/libc/s
-   bb374:	696c6474 61722f62 632e646e 696e6900     tdlib/rand.c.ini
-   bb384:	00007974                                ty..
+000bb248 <_ZTSN10__cxxabiv117__class_type_infoE>:
+   bb248:	5f30314e 7878635f 76696261 5f373131     N10__cxxabiv117_
+   bb258:	616c635f 745f7373 5f657079 6f666e69     _class_type_info
+   bb268:	00000045                                E...
 
-000bb388 <fpi.1>:
-   bb388:	00000035 fffffbce 000003cb 00000001     5...............
-   bb398:	00000000                                ....
+000bb26c <_ZTVN10__cxxabiv117__class_type_infoE>:
+   bb26c:	00000000 000bb23c 000b839d 000b83b1     ....<...........
+   bb27c:	000b8545 000b8545 000b841b 000b835d     E...E.......]...
+   bb28c:	000b8403 000b83c5 000b838f              ............
 
-000bb39c <fpinan.0>:
-   bb39c:	00000034 fffffbce 000003cb 00000001     4...............
-   bb3ac:	00000000                                ....
+000bb298 <_ZTIN10__cxxabiv120__si_class_type_infoE>:
+   bb298:	000bb2d4 000bb2a4 000bb23c              ........<...
+
+000bb2a4 <_ZTSN10__cxxabiv120__si_class_type_infoE>:
+   bb2a4:	5f30314e 7878635f 76696261 5f303231     N10__cxxabiv120_
+   bb2b4:	5f69735f 73616c63 79745f73 695f6570     _si_class_type_i
+   bb2c4:	456f666e 00000000                       nfoE....
+
+000bb2cc <_ZTVN10__cxxabiv120__si_class_type_infoE>:
+   bb2cc:	00000000 000bb298 000b8445 000b8459     ........E...Y...
+   bb2dc:	000b8545 000b8545 000b841b 000b835d     E...E.......]...
+   bb2ec:	000b8519 000b84a5 000b846d              ........m...
+
+000bb2f8 <_ZTISt9type_info>:
+   bb2f8:	000bb274 000bb300                       t.......
+
+000bb300 <_ZTSSt9type_info>:
+   bb300:	74397453 5f657079 6f666e69 45455200     St9type_info.REE
+   bb310:	6d20544e 6f6c6c61 75732063 65656363     NT malloc succee
+   bb320:	00646564 706d742f 6e656a2f 736e696b     ded./tmp/jenkins
+   bb330:	4343472d 2d30312d 65706970 656e696c     -GCC-10-pipeline
+   bb340:	5f38342d 30323032 34323131 3036315f     -48_20201124_160
+   bb350:	30383136 2f393336 2f637273 6c77656e     6180639/src/newl
+   bb360:	6e2f6269 696c7765 696c2f62 732f6362     ib/newlib/libc/s
+   bb370:	696c6474 61722f62 632e646e 696e6900     tdlib/rand.c.ini
+   bb380:	00007974                                ty..
+
+000bb384 <fpi.1>:
+   bb384:	00000035 fffffbce 000003cb 00000001     5...............
+   bb394:	00000000                                ....
+
+000bb398 <fpinan.0>:
+   bb398:	00000034 fffffbce 000003cb 00000001     4...............
+	...
 
 000bb3b0 <tinytens>:
    bb3b0:	97d889bc 3c9cd2b2 d5a8a733 3949f623     .......<3...#.I9
@@ -14328,7 +14327,7 @@ USARTSerial& __fetch_global_Serial1()
    bb548:	0000632e                                .c..
 
 000bb54c <_C_numeric_locale>:
-   bb54c:	000bb0d8 000baa38 2003e448 4f500043     ....8...H.. C.PO
+   bb54c:	000bb0d4 000baa34 2003e448 4f500043     ....4...H.. C.PO
    bb55c:	00584953 706d742f 6e656a2f 736e696b     SIX./tmp/jenkins
    bb56c:	4343472d 2d30312d 65706970 656e696c     -GCC-10-pipeline
    bb57c:	5f38342d 30323032 34323131 3036315f     -48_20201124_160
